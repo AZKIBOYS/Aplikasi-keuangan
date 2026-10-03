@@ -33,6 +33,31 @@
                     <p id="total-pengeluaran">Rp 0</p>
                 </div>
             </section>
-            
+ 
+            <section class="form-container">
+                <h2><i class="fa-solid fa-file-circle-plus"></i> Form Tambah Transaksi</h2>
+                <form id="transaction-form">
+                    <div class="input-group">
+                        <label for="description"><i class="fa-solid fa-pen-to-square"></i> Keterangan Transaksi:</label>
+                        <input type="text" id="description" placeholder="cth: Gaji bulanan / Beli makanan" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="amount"><i class="fa-solid fa-money-bill-wave"></i> Nominal (Rp):</label>
+                        <input type="number" id="amount" placeholder="cth: 50000" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-tags"></i> Jenis Transaksi:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="type" value="income" checked> <i class="fa-solid fa-circle-check" style="color: #10B981;"></i> Pemasukan</label>
+                            <label><input type="radio" name="type" value="expense"> <i class="fa-solid fa-circle-xmark" style="color: #EF4444;"></i> Pengeluaran</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-floppy-disk"></i> SIMPAN TRANSAKSI</button>
+                </form>
+            </section>
+        </div>
 </body>
 </html>
