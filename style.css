@@ -160,3 +160,35 @@ main {
 .btn-back:hover {
     background-color: #4B5563;
 }
+
+#transaction-list {
+    list-style: none;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 5px solid #10B981;
+}
+
+.transaction-item.expense {
+    border-left-color: #EF4444;
+}
+
+.btn-delete {
+    background-color: #EF4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #DC2626;
+}
