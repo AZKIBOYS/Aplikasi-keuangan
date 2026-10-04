@@ -114,3 +114,10 @@ function initApp() {
     totalSaldoEl.innerText = formatRupiah(totalBalance);
     totalPemasukanEl.innerText = formatRupiah(totalIncome);
     totalPengeluaranEl.innerText = formatRupiah(totalExpense);
+    
+    let percentage = 0;
+    if (totalIncome > 0) {
+        percentage = Math.round((totalExpense / totalIncome) * 100);
+    }
+    statRatioEl.innerText = `${percentage}% dari Pemasukan`;
+}
