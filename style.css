@@ -68,3 +68,25 @@ main {
     gap: 15px;
     margin-bottom: 20px;
 }
+
+.card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.card.total { background-color: #1E3A8A; }
+.card.income { background-color: #10B981; }
+.card.expense { background-color: #EF4444; }
+
+.card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
