@@ -90,3 +90,41 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+.form-container, .history-container {
+    background-color: #D1FAE5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-container h2, .history-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #065F46;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9CA3AF;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
