@@ -41,3 +41,26 @@ function switchPage(pageId) {
         btnStats.classList.add('active');
     }
 }
+// Event Submit Form
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const description = descriptionInput.value;
+    const amount = Number(amountInput.value);
+    const type = document.querySelector('input[name="type"]:checked').value;
+
+    if (amount <= 0) {
+        alert("Silakan masukkan nominal angka yang lebih besar dari 0!");
+        return;
+    }
+
+    const newTransaction = {
+        id: Date.now(),
+        description: description,
+        amount: amount,
+        type: type
+    };
+
+    transactions.push(newTransaction);
+    initApp();
+    form.reset();
