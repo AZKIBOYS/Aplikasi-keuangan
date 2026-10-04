@@ -64,3 +64,9 @@ form.addEventListener('submit', function (e) {
     transactions.push(newTransaction);
     initApp();
     form.reset();
+
+    transactions.push(newTransaction);
+    initApp();
+    form.reset();
+    switchPage('history');
+});
