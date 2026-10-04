@@ -51,3 +51,9 @@ header h1 i {
     color: #1E3A8A;
     font-weight: bold;
 }
+
+.page {
+    transition: opacity 0.3s ease-in-out;
+    max-width: 800px;
+    margin: 0 auto;
+}
