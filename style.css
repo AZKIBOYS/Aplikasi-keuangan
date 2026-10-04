@@ -192,3 +192,9 @@ main {
 .btn-delete:hover {
     background-color: #DC2626;
 }
+
+@media (max-width: 600px) {
+    .summary-container {
+        flex-direction: column;
+    }
+}
