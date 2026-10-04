@@ -8,3 +8,7 @@ const totalSaldoEl = document.getElementById('total-saldo');
 const totalPemasukanEl = document.getElementById('total-pemasukan');
 const totalPengeluaranEl = document.getElementById('total-pengeluaran');
 const statRatioEl = document.getElementById('stat-ratio');
+
+function formatRupiah(number) {
+    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+}
