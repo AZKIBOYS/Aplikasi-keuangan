@@ -121,3 +121,5 @@ function initApp() {
     }
     statRatioEl.innerText = `${percentage}% dari Pemasukan`;
 }
+
+initApp();
