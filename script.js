@@ -75,3 +75,42 @@ function deleteTransaction(id) {
     transactions = transactions.filter(transaction => transaction.id !== id);
     initApp();
 }
+
+function initApp() {
+    transactionList.innerHTML = '';
+    let totalIncome = 0;
+    let totalExpense = 0;
+
+    if (transactions.length === 0) {
+        transactionList.innerHTML = '<li style="text-align: center; color: #6B7280; padding: 15px; background: white; border-radius: 5px;"><i class="fa-solid fa-folder-open"></i> Belum ada transaksi tercatat.</li>';
+    }
+
+    transactions.forEach(transaction => {
+        if (transaction.type === 'income') {
+            totalIncome += transaction.amount;
+        } else {
+            totalExpense += transaction.amount;
+        }
+
+        const item = document.createElement('li');
+        item.classList.add('transaction-item');
+        if (transaction.type === 'expense') {
+            item.classList.add('expense');
+        }
+
+        const sign = transaction.type === 'income' ? '+' : '-';
+
+        item.innerHTML = `
+            <span>${transaction.description}</span>
+            <span>${sign} ${formatRupiah(transaction.amount)}</span>
+            <button class="btn-delete" onclick="deleteTransaction(${transaction.id})"><i class="fa-solid fa-trash-can"></i> Hapus</button>
+        `;
+
+        transactionList.appendChild(item);
+    });
+
+    const totalBalance = totalIncome - totalExpense;
+
+    totalSaldoEl.innerText = formatRupiah(totalBalance);
+    totalPemasukanEl.innerText = formatRupiah(totalIncome);
+    totalPengeluaranEl.innerText = formatRupiah(totalExpense);
