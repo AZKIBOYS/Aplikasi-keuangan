@@ -128,3 +128,35 @@ main {
     display: flex;
     gap: 20px;
 }
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #059669;
+}
+
+.btn-back {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #6B7280;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-back:hover {
+    background-color: #4B5563;
+}
